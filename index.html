@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rivett · The income layer for tokenized stocks</title>
+  <meta name="description" content="Hold the stock. Collect the income. Deposit tokenized stocks and they start working." />
+  
+  <!-- OG Meta Tags -->
+  <meta property="og:title" content="Rivett · The income layer for tokenized stocks" />
+  <meta property="og:description" content="Hold the stock. Collect the income. Deposit tokenized stocks and they start working." />
+  <meta property="og:url" content="https://rivett.xyz" />
+  <meta property="og:site_name" content="Rivett" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@rivett_ai" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 118 89' fill='%236D9E96'><path d='M 30 0 A 29 29 0 0 0 59 29 L 59 0 Z'/><path d='M 0 31 L 58 31 A 58 58 0 0 1 0 89 Z'/><path d='M 118 0 L 118 58 L 60 58 A 58 58 0 0 1 118 0 Z'/><path d='M 60 89 L 60 60 A 29 29 0 0 1 89 89 Z'/></svg>" />
+
+  <!-- Google Fonts: Space Grotesk / Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="bloom bloom-top" aria-hidden="true"></div>
+  <div class="bloom bloom-c" aria-hidden="true"></div>
+  <div class="ambient-glow" id="ambientGlow" aria-hidden="true"></div>
+
+  <div class="site-wrapper">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="/" class="brand-link">
+          <svg viewBox="0 0 118 89" fill="currentColor" class="brand-logo" aria-hidden="true">
+            <path d="M 30 0 A 29 29 0 0 0 59 29 L 59 0 Z"/>
+            <path d="M 0 31 L 58 31 A 58 58 0 0 1 0 89 Z"/>
+            <path d="M 118 0 L 118 58 L 60 58 A 58 58 0 0 1 118 0 Z"/>
+            <path d="M 60 89 L 60 60 A 29 29 0 0 1 89 89 Z"/>
+          </svg>
+          <span class="brand-name">rivett</span>
+        </a>
+        <button id="getStartedBtnNav" class="btn-primary">Get started</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+      
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <h1 class="hero-title animate-item" style="--delay: 0ms;">
+          Hold the stock.<br />Collect the income.
+        </h1>
+        <p class="hero-desc animate-item" style="--delay: 100ms;">
+          Deposit tokenized stocks you already own and they start working. Income while you hold. A floor when you want one. A position when you see one.
+        </p>
+        <div class="hero-actions animate-item" style="--delay: 200ms;">
+          <button id="getStartedBtnHero" class="btn-primary btn-lg">Get started</button>
+          <button id="calcBtn" class="btn-secondary btn-lg">Yield Calculator</button>
+        </div>
+      </section>
+
+      <!-- Desk Section ("what your stocks can do") -->
+      <section class="desk-section">
+        <div class="desk-inner">
+          <div class="eyebrow animate-item" style="--delay: 250ms;">what your stocks can do</div>
+          
+          <div class="verbs">
+            <!-- Earn -->
+            <div class="verb animate-item" style="--delay: 300ms;">
+              <svg viewBox="0 0 58 58" fill="#6D9E96" class="v-mark" aria-hidden="true">
+                <path d="M 0 0 L 58 0 A 58 58 0 0 1 0 58 Z" />
+              </svg>
+              <h3>Earn</h3>
+              <p>Deposit the stock tokens you already hold. Collect income in USDG.</p>
+            </div>
+
+            <!-- Protect -->
+            <div class="verb animate-item" style="--delay: 350ms;">
+              <svg viewBox="0 0 58 58" fill="#6D9E96" class="v-mark" aria-hidden="true">
+                <path d="M 58 0 L 58 58 L 0 58 A 58 58 0 0 1 58 0 Z" />
+              </svg>
+              <h3>Protect</h3>
+              <p>Set a floor under any stock you hold. If it drops through, you are paid the difference.</p>
+            </div>
+
+            <!-- Play -->
+            <div class="verb animate-item" style="--delay: 400ms;">
+              <svg viewBox="0 0 58 58" fill="#6D9E96" class="v-mark" aria-hidden="true">
+                <path d="M 0 58 L 0 0 A 58 58 0 0 1 58 58 Z" />
+              </svg>
+              <h3>Play</h3>
+              <p>Back a hunch with fixed cost and a fixed payout. Settled automatically.</p>
+            </div>
+          </div>
+
+          <!-- Ivy Desk Box -->
+          <div class="ivy animate-item" style="--delay: 450ms;">
+            <div class="ivy-avatar" aria-hidden="true">
+              <svg viewBox="0 0 118 89" fill="#0B1416" aria-hidden="true" class="ivy-logo">
+                <path d="M 30 0 A 29 29 0 0 0 59 29 L 59 0 Z"/>
+                <path d="M 0 31 L 58 31 A 58 58 0 0 1 0 89 Z"/>
+                <path d="M 118 0 L 118 58 L 60 58 A 58 58 0 0 1 118 0 Z"/>
+                <path d="M 60 89 L 60 60 A 29 29 0 0 1 89 89 Z"/>
+              </svg>
+            </div>
+            <div class="ivy-body">
+              <h4>Ivy runs the desk.</h4>
+              <p>Ivy prices each position, hedges the book, and writes a daily report on what changed and why. Deposits stay onchain where you can verify them. The reasoning is published where you can read it.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="foot-left">
+        <svg viewBox="0 0 118 89" fill="#D3DCD9" class="foot-logo" aria-hidden="true">
+          <path d="M 30 0 A 29 29 0 0 0 59 29 L 59 0 Z"/>
+          <path d="M 0 31 L 58 31 A 58 58 0 0 1 0 89 Z"/>
+          <path d="M 118 0 L 118 58 L 60 58 A 58 58 0 0 1 118 0 Z"/>
+          <path d="M 60 89 L 60 60 A 29 29 0 0 1 89 89 Z"/>
+        </svg>
+        <span>rivett</span>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="#desk" id="deskReportLink">desk reports</a>
+        <a href="#docs" id="docsLink">docs</a>
+        <a class="x-link" href="https://x.com/rivett_ai" target="_blank" rel="noopener noreferrer" aria-label="Rivett on X">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+          </svg>
+        </a>
+      </nav>
+    </footer>
+
+  </div>
+
+  <!-- Interactive App Modal -->
+  <div id="appModal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <button id="closeModal" class="modal-close" aria-label="Close">&times;</button>
+      
+      <div class="modal-header">
+        <div class="badge">ONCHAIN INCOME DESK</div>
+        <h2>Deposit Tokenized Stocks</h2>
+        <p>Select your tokenized stock position to begin earning automated USDG yield.</p>
+      </div>
+
+      <div class="app-calc-box">
+        <div class="form-row">
+          <label for="assetSelect">Select Asset:</label>
+          <select id="assetSelect" class="app-select">
+            <option value="TSLA" data-yield="14.2" data-price="218.40">xTSLA (Tesla Tokenized)</option>
+            <option value="NVDA" data-yield="18.6" data-price="118.25">xNVDA (NVIDIA Tokenized)</option>
+            <option value="AAPL" data-yield="11.5" data-price="224.10">xAAPL (Apple Tokenized)</option>
+            <option value="MSFT" data-yield="12.8" data-price="448.90">xMSFT (Microsoft Tokenized)</option>
+            <option value="COIN" data-yield="24.5" data-price="235.60">xCOIN (Coinbase Tokenized)</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="depositAmount">Deposit Amount ($USD):</label>
+          <input type="number" id="depositAmount" class="app-input" value="10000" min="100" step="500" />
+        </div>
+
+        <div class="calc-results">
+          <div class="res-card">
+            <div class="res-label">Est. APY</div>
+            <div id="resApy" class="res-val highlight">14.2%</div>
+          </div>
+          <div class="res-card">
+            <div class="res-label">Monthly USDG Income</div>
+            <div id="resMonthly" class="res-val">$118.33</div>
+          </div>
+          <div class="res-card">
+            <div class="res-label">Annual USDG Income</div>
+            <div id="resAnnual" class="res-val">$1,420.00</div>
+          </div>
+        </div>
+
+        <button id="confirmDepositBtn" class="btn-primary btn-block">Connect Wallet & Deposit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Desk Reports Drawer -->
+  <div id="deskDrawer" class="drawer-overlay hidden">
+    <div class="drawer-card">
+      <button id="closeDrawer" class="modal-close">&times;</button>
+      <div class="drawer-header">
+        <h3>Ivy's Daily Desk Report</h3>
+        <span class="date-tag">Today · Onchain Verified</span>
+      </div>
+      <div class="drawer-body">
+        <div class="report-entry">
+          <span class="report-tag">Hedge Update</span>
+          <p>Book delta hedged across 5 tokenized equity pools. USDG payout reserves backed 1:1 in treasury vault.</p>
+        </div>
+        <div class="report-entry">
+          <span class="report-tag">Yield Distribution</span>
+          <p>Distributed <strong>14,820 USDG</strong> to active stock depositors over the last 24h.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden">Connected to Web3 Provider</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
